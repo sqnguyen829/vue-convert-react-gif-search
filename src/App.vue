@@ -1,28 +1,54 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div>
+        <NavBar color='black' title="Giphy Search" />
+        <GifListContainer/>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GifListContainer from './containers/GifListContainer'
+import NavBar from './components/NavBar'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    GifListContainer,
+    NavBar
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
+.column-right {
+  float: right;
+  width: 30%;
+  /* margin-top: -30px */
 }
+.column-left {
+    float: left;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: -70px
+}
+
+.button-submit {
+    background-color:rgb(12, 224, 12);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 4px 10px;
+}
+
+.input-submit:focus {
+    background-color:white;
+    width: 90%;
+    border: 3px solid rgb(83, 194, 228)
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 </style>
