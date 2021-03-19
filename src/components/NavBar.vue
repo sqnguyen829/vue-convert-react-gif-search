@@ -1,9 +1,9 @@
 <template>
-    <nav class={navbar ${colors[props.color]}}>
+    <nav :style="{'black': 'navbar-inverse', 'white': 'navbar-default'}">
       <div class='container-fluid'>
-        <div class='navbar-header'>
+        <div class='navbar-header' :style="{'background':'rgb(189, 181, 181)', 'text-align': 'center'}">
           <a class='navbar-brand'>
-            { props.title }
+            {{title}}
           </a>
         </div>
       </div>
@@ -11,3 +11,13 @@
 </template>
 
 
+<script>
+export default {
+    name:'NavBar',
+    data() {
+        return {
+            title:'Gif Searcher'
+        }
+    }
+}
+</script>

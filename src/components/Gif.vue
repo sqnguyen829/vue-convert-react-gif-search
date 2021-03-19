@@ -1,7 +1,14 @@
 <template>
     <div>
         <li>
-            <img src={this.props.image.images.downsized_medium.url}/>
+            <img :src="gif"/>
         </li>
     </div>
 </template>
+
+<script>
+export default {
+    name:"Gif",
+    props:["gif"]
+}
+</script>
