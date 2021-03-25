@@ -5,12 +5,18 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import Gif from '../components/Gif'
 export default {
     name:'GifList',
-    props:["gifs"],
     components:{
         Gif
+    },
+    computed: {
+        ...mapState([
+            'gifs'
+        ])
     }
 }
 </script>
